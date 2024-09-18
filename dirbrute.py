@@ -17,7 +17,7 @@ def brute(url, wordlist):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Uso: python script.py <url> <wordlist>")
+        print("Usage: python script.py <url> <wordlist>")
         sys.exit(1)
 
     url = sys.argv[1]
@@ -28,6 +28,6 @@ if __name__ == "__main__":
             wordlist = file.readlines()
             brute(url, wordlist)
     except FileNotFoundError:
-        print("Wordlist não encontrada: {}".format(wordlist))
+        print("Wordlist not found: {}".format(wordlist))
         sys.exit(1)
 
